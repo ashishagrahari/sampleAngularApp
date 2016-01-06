@@ -1,0 +1,56 @@
+ <div class="well">
+		    	<div class="conteiner">
+		    		<div class="row">
+				    	<div class="col-md-3">
+				    		<div class="form-group">
+							    <div class="col-sm-10">
+							      <input type="text" data-ng-model="product.id" class="form-control" placeholder="Product Id">
+							    </div>
+							  </div>
+				    	</div>
+				    	<div class="col-md-3">
+				    		<div class="form-group">
+							    <div class="col-sm-10">
+							      <input type="text" data-ng-model="product.name" class="form-control" placeholder="Product Name">
+							    </div>
+							  </div>
+				    	</div>
+				    	<div class="col-md-3">
+				    		<div class="form-group">
+							    <div class="col-sm-10">
+							      <input type="text" data-ng-model="product.status" class="form-control" placeholder="Status">
+							    </div>
+							  </div>
+				    	</div>
+				    	<div class="col-md-3">
+				    		<div class="form-group">
+							    <div class="col-sm-10">
+							      <input type="text" data-ng-model="product.comment" class="form-control" placeholder="Comments">
+							    </div>
+							  </div>
+				    	</div>
+				    </div>
+		    	</div>
+		    </div>
+
+		    
+		    
+
+		  <table class="table table-bordered">
+		    <thead>
+		      <tr>
+		        <th>Product Id</th>
+		        <th>Product Name</th>
+		        <th>Status</th>
+		        <th>Commments</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr class="success" data-ng-repeat="product in products | filter:product:strict">
+		        <td>{{product.id}}</td>
+		        <td>{{product.name}}</td>
+		        <td>{{product.status}}</td>
+		        <td>{{product.comment}}</td>
+		      </tr>
+		    </tbody>
+		  </table>
